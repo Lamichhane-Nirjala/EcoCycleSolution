@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "87568816432",
+    "firebase_url": "https://eco-cycle-2e924-default-rtdb.firebaseio.com",
+    "project_id": "eco-cycle-2e924",
+    "storage_bucket": "eco-cycle-2e924.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:87568816432:android:9e2fdda87a3f5d658a50f5",
+        "android_client_info": {
+          "package_name": "com.example.ecocyclesolution"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMKAO0n_yw5Jj1L3CBZh6rnVMzmpQrgbE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
