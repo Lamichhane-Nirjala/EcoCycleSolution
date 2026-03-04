@@ -1,24 +1,63 @@
 package com.example.ecocyclesolution
 
-import androidx.test.platform.app.InstrumentationRegistry
+import android.content.Context
 import androidx.test.ext.junit.runners.AndroidJUnit4
-
+import androidx.test.platform.app.InstrumentationRegistry
+import org.junit.Assert.assertEquals
+import org.junit.Assert.assertNotNull
 import org.junit.Test
 import org.junit.runner.RunWith
 
-import org.junit.Assert.*
-
 /**
- * Instrumented test, which will execute on an Android device.
- *
- * See [testing documentation](http://d.android.com/tools/testing).
+ * Instrumented Test Class
+ * Runs on Android Emulator or Physical Device
  */
+
 @RunWith(AndroidJUnit4::class)
 class ExampleInstrumentedTest {
+
+    /**
+     * Test 1:
+     * Verify App Context Package Name
+     */
     @Test
     fun useAppContext() {
-        // Context of the app under test.
-        val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.example.ecocyclesolution", appContext.packageName)
+
+        val appContext: Context =
+            InstrumentationRegistry.getInstrumentation().targetContext
+
+        assertEquals(
+            "com.example.ecocyclesolution",
+            appContext.packageName
+        )
+    }
+
+    /**
+     * Test 2:
+     * Verify Context is Available
+     */
+    @Test
+    fun contextIsNotNull() {
+
+        val context =
+            InstrumentationRegistry.getInstrumentation().targetContext
+
+        assertNotNull(context)
+    }
+
+    /**
+     * Test 3:
+     * Verify Application Name Exists
+     */
+    @Test
+    fun checkApplicationName() {
+
+        val context =
+            InstrumentationRegistry.getInstrumentation().targetContext
+
+        val appName =
+            context.applicationInfo.loadLabel(context.packageManager)
+
+        assertNotNull(appName)
     }
 }
